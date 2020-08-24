@@ -19,7 +19,7 @@ all: test install
 build:
 	$(GOBUILD) $(LDFLAGS) -o $(BINARY_NAME) -v
 build-travis:
-	$(GOBUILD) $(LDFLAGS) -o $(APPNAME) -v
+	$(GOBUILD) $(LDFLAGS) -o $(APPNAME)-$(TRAVIS_CPU_ARCH) -v
 test:
 	$(GOTEST) -v
 clean:
