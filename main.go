@@ -67,8 +67,6 @@ func main() {
 					return
 				}
 				if event.Name[len(event.Name)-4:] != ".swp" || event.Name[len(event.Name)-1:] != "~" {
-					log.Println(event.Name[len(event.Name)-4:])
-					log.Println(event.Name[len(event.Name)-1:])
 					log.Println("event:", event)
 					writeHosts(*hostsPath, *hostsFile)
 				}
