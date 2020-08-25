@@ -18,6 +18,8 @@ LDFLAGS=-ldflags '-s -w -X "main.appName=$(APPNAME)" -X "main.buildVersion=$(VER
 all: test install
 build:
 	$(GOBUILD) $(LDFLAGS) -o $(BINARY_NAME) -v
+build-arm:
+	env TRAVIS_CPU_ARCH=arm GOOS=linux GOARCH=arm GOARM=5 make build-travis
 build-travis:
 	$(GOBUILD) $(LDFLAGS) -o $(APPNAME)-$(TRAVIS_CPU_ARCH) -v
 test:
