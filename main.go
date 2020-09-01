@@ -79,7 +79,7 @@ func main() {
 		}
 	}()
 
-	err = watcher.Add("/etc/hosts.d/")
+	err = watcher.Add(*hostsPath)
 	if err != nil {
 		log.Fatal(err)
 	}
