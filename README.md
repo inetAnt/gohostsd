@@ -9,4 +9,6 @@ None :( (not yet at least)
 
 ## Deployment
 
-Very manual for now, I'll write a systemd unit file as an example once I actually deploy this code somewhere.
+There are no package available yet, just a binary that you can run with `systemd`, the [example file](https://github.com/inetAnt/gohostsd/blob/master/gohostsd.service).
+
+You simply have to copy the file to `/etc/systemd/system/`, run `systemctl daemon-reload` and `systemctl enable --now gohostsd.service` to both enable and start the service.   
